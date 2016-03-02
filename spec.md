@@ -1,6 +1,6 @@
 ## Introduction
 
-This document specifies the WAST-AST node types.
+This document specifies the WebAssembly AST node types.
 
 ## module
 
@@ -10,4 +10,3 @@ This document specifies the WAST-AST node types.
     body: [ ]
 }
 ```
-
