@@ -1,8 +1,16 @@
 ## Introduction
 
-This document specifies the WebAssembly AST Object types.
+This document specifies the WebAssembly AST node types.
+Spec directly reflects [AstSemantics](https://github.com/WebAssembly/design/blob/master/AstSemantics.md)
+document.
+
+## Types
+
+[types](https://github.com/WebAssembly/design/blob/master/AstSemantics.md#types)
 
 ## Objects
+
+[module](https://github.com/WebAssembly/design/blob/master/Modules.md)
 
 ```js
 {
@@ -11,12 +19,14 @@ This document specifies the WebAssembly AST Object types.
   failure: <failure>
 }
 ```
+
 ```js
 {
   kind: 'assert_return_nan',
   invoke: <invoke>
 }
 ```
+
 ```js
 {
   kind: 'assert_return',
@@ -24,6 +34,7 @@ This document specifies the WebAssembly AST Object types.
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'assert_trap',
@@ -31,6 +42,7 @@ This document specifies the WebAssembly AST Object types.
   failure: <failure>
 }
 ```
+
 ```js
 {
   kind: 'binop',
@@ -39,6 +51,7 @@ This document specifies the WebAssembly AST Object types.
   right: Object
 }
 ```
+
 ```js
 {
   kind: 'block',
@@ -46,6 +59,7 @@ This document specifies the WebAssembly AST Object types.
   body: [ ]
 }
 ```
+
 ```js
 {
   kind: 'br_if',
@@ -54,6 +68,7 @@ This document specifies the WebAssembly AST Object types.
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'br',
@@ -61,6 +76,7 @@ This document specifies the WebAssembly AST Object types.
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'call_import',
@@ -68,6 +84,7 @@ This document specifies the WebAssembly AST Object types.
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'call_indirect',
@@ -75,6 +92,7 @@ This document specifies the WebAssembly AST Object types.
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'call',
@@ -82,17 +100,20 @@ This document specifies the WebAssembly AST Object types.
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'case',
   body: [ ]
 }
 ```
+
 ```js
 {
   kind: 'const',
 }
 ```
+
 ```js
 {
   kind: 'cvtop',
@@ -100,17 +121,20 @@ This document specifies the WebAssembly AST Object types.
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'export',
   id: <literal> | <identifier>
 }
 ```
+
 ```js
 {
   kind: 'failure'
 }
 ```
+
 ```js
 {
   kind: 'func',
@@ -120,29 +144,34 @@ This document specifies the WebAssembly AST Object types.
   body: [ ]
 }
 ```
+
 ```js
 {
   kind: 'get_local',
   id: <literal> | <identifier>
 }
 ```
+
 ```js
 {
   kind: 'grow_memory',
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'has_feature',
 }
 ```
+
 ```js
 {
   kind: 'identifier',
   id: String
 }
 ```
+
 ```js
 {
   kind: 'if_else',
@@ -151,6 +180,7 @@ This document specifies the WebAssembly AST Object types.
   alternate: Object
 }
 ```
+
 ```js
 {
   kind: 'if',
@@ -158,6 +188,7 @@ This document specifies the WebAssembly AST Object types.
   consequent: Object
 }
 ```
+
 ```js
 {
   kind: 'import',
@@ -165,6 +196,7 @@ This document specifies the WebAssembly AST Object types.
   params: [ ]
 }
 ```
+
 ```js
 {
   kind:
@@ -172,12 +204,14 @@ This document specifies the WebAssembly AST Object types.
   body: [ ]
 }
 ```
+
 ```js
 {
   kind: 'item',
   type: <type>
 }
 ```
+
 ```js
 {
   kind: 'literal',
@@ -185,19 +219,28 @@ This document specifies the WebAssembly AST Object types.
   raw: String
 }
 ```
+
+[load](https://github.com/WebAssembly/design/blob/master/AstSemantics.md#linear-memory-accesses)
+
 ```js
 {
   kind: 'load',
   type: <type>,
+  size: 8 | 16 | 32,
+  sign: 's' | 'u' | null,
+  offset: Integer,
+  align: Integer,
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'local',
-  items: [ ]
+  items: [ <item> ]
 }
 ```
+
 ```js
 {
   kind: 'loop',
@@ -205,34 +248,46 @@ This document specifies the WebAssembly AST Object types.
   'extra'
 }
 ```
+
 ```js
 {
   kind: 'memory_size'
 }
 ```
+
 ```js
 {
   kind: 'memory',
   'segment'
 }
 ```
+
 ```js
 {
   kind: 'module',
-  body: [ ]
+  body: [ Object ]
 }
 ```
+
 ```js
 {
   kind: 'nop'
 }
 ```
+
 ```js
 {
-  kind: param: Object,
-  items: [ ]
+  kind: 'page_size'
 }
 ```
+
+```js
+{
+  kind: 'param',
+  items: [ <item> ]
+}
+```
+
 ```js
 {
   kind: 'relop',
@@ -241,34 +296,40 @@ This document specifies the WebAssembly AST Object types.
   right: Object
 }
 ```
+
 ```js
 {
   kind: 'resize_memory',
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'result'
 }
 ```
+
 ```js
 {
   kind: 'return',
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'script',
   body: [ ]
 }
 ```
+
 ```js
 {
   kind: 'segment',
 }
 ```
+
 ```js
 {
   kind: 'select',
@@ -278,6 +339,7 @@ This document specifies the WebAssembly AST Object types.
   alternate: Object
 }
 ```
+
 ```js
 {
   kind: 'set_local',
@@ -285,26 +347,35 @@ This document specifies the WebAssembly AST Object types.
   init: Object
 }
 ```
+
 ```js
 {
   kind: 'start',
   id: <literal> | <identifier>
 }
 ```
+
+[store](https://github.com/WebAssembly/design/blob/master/AstSemantics.md#linear-memory-accesses)
+
 ```js
 {
   kind: 'store',
   type: <type>,
+  size: 8 | 16 | 32,
+  offset: Integer,
+  align: Integer,
   addr: String,
   data: String
 }
 ```
+
 ```js
 {
   kind: 'table',
-  items: [ ]
+  items: [ <item> ]
 }
 ```
+
 ```js
 {
   kind: 'tableswitch',
@@ -314,12 +385,14 @@ This document specifies the WebAssembly AST Object types.
   body: [ ]
 }
 ```
+
 ```js
 {
   kind: 'type',
   id: <literal> | <identifier>
 }
 ```
+
 ```js
 {
   kind: 'unop',
@@ -328,6 +401,7 @@ This document specifies the WebAssembly AST Object types.
   expr: Object
 }
 ```
+
 ```js
 {
   kind: 'unreachable'
