@@ -341,7 +341,6 @@ document.
 ```js
 {
   kind: 'select',
-  type: <type>,
   test: Object,
   consequent: Object,
   alternate: Object
