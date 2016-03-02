@@ -34,6 +34,7 @@ This document specifies the WebAssembly AST Object types.
 ```js
 {
   kind: 'binop',
+  type: <type>,
   left: Object,
   right: Object
 }
@@ -95,6 +96,7 @@ This document specifies the WebAssembly AST Object types.
 ```js
 {
   kind: 'cvtop',
+  type: <type>,
   expr: Object
 }
 ```
@@ -173,6 +175,7 @@ This document specifies the WebAssembly AST Object types.
 ```js
 {
   kind: 'item',
+  type: <type>
 }
 ```
 ```js
@@ -185,6 +188,7 @@ This document specifies the WebAssembly AST Object types.
 ```js
 {
   kind: 'load',
+  type: <type>,
   expr: Object
 }
 ```
@@ -232,7 +236,9 @@ This document specifies the WebAssembly AST Object types.
 ```js
 {
   kind: 'relop',
-  left: Object, right: Object
+  type: <type>,
+  left: Object,
+  right: Object
 }
 ```
 ```js
@@ -266,6 +272,7 @@ This document specifies the WebAssembly AST Object types.
 ```js
 {
   kind: 'select',
+  type: <type>,
   test: Object,
   consequent: Object,
   alternate: Object
@@ -287,6 +294,7 @@ This document specifies the WebAssembly AST Object types.
 ```js
 {
   kind: 'store',
+  type: <type>,
   addr: String,
   data: String
 }
@@ -315,9 +323,9 @@ This document specifies the WebAssembly AST Object types.
 ```js
 {
   kind: 'unop',
+  type: <type>,
   operator: String
-  expr: Object,
-  type: <type>
+  expr: Object
 }
 ```
 ```js
