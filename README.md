@@ -3,7 +3,8 @@
 ## About
 
 The repository defines Abstract Syntax Tree (AST) format that can be used to
-represent the structure of WebAssembly program in JSON container.
+represent the structure of [WebAssembly](https://github.com/WebAssembly/spec)
+program in a JSON container. 
 
 ## Status
 
