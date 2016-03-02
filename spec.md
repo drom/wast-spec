@@ -47,6 +47,7 @@ document.
 {
   kind: 'binop',
   type: <type>,
+  operator: String,
   left: Object,
   right: Object
 }
@@ -56,7 +57,7 @@ document.
 {
   kind: 'block',
   id: <literal> | <identifier>,
-  body: [ ]
+  body: [ Object ]
 }
 ```
 
@@ -104,13 +105,15 @@ document.
 ```js
 {
   kind: 'case',
-  body: [ ]
+  body: [ Object ]
 }
 ```
 
 ```js
 {
   kind: 'const',
+  type: <type>,
+  init: String
 }
 ```
 
@@ -118,6 +121,8 @@ document.
 {
   kind: 'cvtop',
   type: <type>,
+  type1: <type>,
+  operator: String,
   expr: Object
 }
 ```
@@ -141,7 +146,7 @@ document.
   id: <literal> | <identifier>,
   param: Object,
   result: Object,
-  body: [ ]
+  body: [ Object ]
 }
 ```
 
@@ -185,7 +190,8 @@ document.
 {
   kind: 'if',
   test: Object,
-  consequent: Object
+  consequent: Object,
+  alternate: null
 }
 ```
 
@@ -199,9 +205,9 @@ document.
 
 ```js
 {
-  kind:
-  invoke: <invoke>,
-  body: [ ]
+  kind: 'invoke',
+  name: String,
+  body: [ Object ]
 }
 ```
 
@@ -215,7 +221,7 @@ document.
 ```js
 {
   kind: 'literal',
-  value: Number,
+  value: Integer,
   raw: String
 }
 ```
@@ -244,8 +250,9 @@ document.
 ```js
 {
   kind: 'loop',
-  body: [ ],
-  'extra'
+  id: <literal> | <identifier>,
+  extra: <extra>,
+  body: [ Object ]
 }
 ```
 
@@ -292,6 +299,7 @@ document.
 {
   kind: 'relop',
   type: <type>,
+  operator: String,
   left: Object,
   right: Object
 }
@@ -320,7 +328,7 @@ document.
 ```js
 {
   kind: 'script',
-  body: [ ]
+  body: [ Object ]
 }
 ```
 
@@ -381,8 +389,8 @@ document.
   kind: 'tableswitch',
   id: <literal> | <identifier>,
   test: Object,
-  table: [ ],
-  body: [ ]
+  table: [ Object ],
+  body: [ Object ]
 }
 ```
 
