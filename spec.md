@@ -188,8 +188,8 @@ document.
 {
   kind: 'import',
   id: <literal> | <identifier> | null,
-  name1: <literal> | <identifier> | null,
-  name2: <literal> | <identifier> | null,
+  modName: <literal> | <identifier> | null,
+  funcName: <literal> | <identifier> | null,
   params: [ <expr> ]
 }
 ```
