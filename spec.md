@@ -16,7 +16,15 @@ document.
 {
   kind: 'assert_invalid',
   module: <module>,
-  failure: <failure>
+  failure: <literal>
+}
+```
+
+```js
+{
+  kind: 'assert_return',
+  invoke: <invoke>,
+  expr: <expr>
 }
 ```
 
@@ -29,17 +37,9 @@ document.
 
 ```js
 {
-  kind: 'assert_return',
-  invoke: <invoke>,
-  expr: Object
-}
-```
-
-```js
-{
   kind: 'assert_trap',
   invoke: <invoke>,
-  failure: <failure>
+  failure: <literal>
 }
 ```
 
@@ -56,56 +56,57 @@ document.
 ```js
 {
   kind: 'block',
-  id: <literal> | <identifier>,
-  body: [ Object ]
-}
-```
-
-```js
-{
-  kind: 'br_if',
-  id: <literal> | <identifier>,
-  test: Object,
-  expr: Object
+  id: <literal> | <identifier> | null,
+  body: [ <expr> ]
 }
 ```
 
 ```js
 {
   kind: 'br',
-  id: <literal> | <identifier>,
-  expr: Object
+  id: <literal> | <identifier> | null,
+  expr: <expr> | null
 }
 ```
 
 ```js
 {
-  kind: 'call_import',
-  id: <literal> | <identifier>,
-  expr: Object
+  kind: 'br_if',
+  id: <literal> | <identifier> | null,
+  test: <expr>,
+  expr: <expr> | null
 }
 ```
 
 ```js
 {
-  kind: 'call_indirect',
-  id: <literal> | <identifier>,
-  expr: Object
+  kind: 'br_table',
+  expr: [ <literal> | <identifier> | null ],
+  body: [ <expr> ]
 }
 ```
 
 ```js
 {
   kind: 'call',
-  id: <literal> | <identifier>,
-  expr: Object
+  id: <literal> | <identifier> | null,
+  expr: <expr>
 }
 ```
 
 ```js
 {
-  kind: 'case',
-  body: [ Object ]
+  kind: 'call_import',
+  id: <literal> | <identifier> | null,
+  expr: <expr>
+}
+```
+
+```js
+{
+  kind: 'call_indirect',
+  id: <literal> | <identifier> | null,
+  expr: <expr>
 }
 ```
 
@@ -113,7 +114,7 @@ document.
 {
   kind: 'const',
   type: <type>,
-  init: String
+  init: <value>
 }
 ```
 
@@ -122,51 +123,48 @@ document.
   kind: 'cvtop',
   type: <type>,
   type1: <type>,
-  operator: String,
-  expr: Object
+  operator: <cvtop>,
+  expr: <expr>
+}
+```
+
+```js
+{
+  kind: 'else',
+  id: <literal> | <identifier> | null,
+  body: [ <expr> ]
 }
 ```
 
 ```js
 {
   kind: 'export',
-  id: <literal> | <identifier>
-}
-```
-
-```js
-{
-  kind: 'failure'
+  name: <string>,
+  id: <literal> | <identifier> | null
 }
 ```
 
 ```js
 {
   kind: 'func',
-  id: <literal> | <identifier>,
-  param: Object,
-  result: Object,
-  body: [ Object ]
+  id: <literal> | <identifier> | null,
+  param: <expr>,
+  result: <expr>,
+  body: [ <expr> ]
 }
 ```
 
 ```js
 {
   kind: 'get_local',
-  id: <literal> | <identifier>
+  id: <literal> | <identifier> | null
 }
 ```
 
 ```js
 {
   kind: 'grow_memory',
-  expr: Object
-}
-```
-
-```js
-{
-  kind: 'has_feature',
+  expr: <expr>
 }
 ```
 
@@ -179,35 +177,28 @@ document.
 
 ```js
 {
-  kind: 'if_else',
-  test: Object,
-  consequent: Object,
-  alternate: Object
-}
-```
-
-```js
-{
   kind: 'if',
-  test: Object,
-  consequent: Object,
-  alternate: null
+  test: <expr>,
+  consequent: <expr>,
+  alternate: <expr> | null
 }
 ```
 
 ```js
 {
   kind: 'import',
-  id: <literal> | <identifier>,
-  params: [ ]
+  id: <literal> | <identifier> | null,
+  name1: <literal> | <identifier> | null,
+  name2: <literal> | <identifier> | null,
+  params: [ <expr> ]
 }
 ```
 
 ```js
 {
   kind: 'invoke',
-  name: String,
-  body: [ Object ]
+  name: <literal> | <identifier>,
+  body: [ <expr> ]
 }
 ```
 
@@ -221,7 +212,7 @@ document.
 ```js
 {
   kind: 'literal',
-  value: Integer,
+  value: Integer | String,
   raw: String
 }
 ```
@@ -258,12 +249,6 @@ document.
 
 ```js
 {
-  kind: 'memory_size'
-}
-```
-
-```js
-{
   kind: 'memory',
   'segment'
 }
@@ -271,20 +256,20 @@ document.
 
 ```js
 {
+  kind: 'memory_size'
+}
+```
+
+```js
+{
   kind: 'module',
-  body: [ Object ]
+  body: [ <expr> ]
 }
 ```
 
 ```js
 {
   kind: 'nop'
-}
-```
-
-```js
-{
-  kind: 'page_size'
 }
 ```
 
@@ -299,29 +284,23 @@ document.
 {
   kind: 'relop',
   type: <type>,
-  operator: String,
-  left: Object,
-  right: Object
+  operator: <relop>,
+  left: <expr>,
+  right: <expr>
 }
 ```
 
 ```js
 {
-  kind: 'resize_memory',
-  expr: Object
-}
-```
-
-```js
-{
-  kind: 'result'
+  kind: 'result',
+  type: <type>
 }
 ```
 
 ```js
 {
   kind: 'return',
-  expr: Object
+  expr: <expr>
 }
 ```
 
@@ -341,24 +320,24 @@ document.
 ```js
 {
   kind: 'select',
-  test: Object,
-  consequent: Object,
-  alternate: Object
+  test: <expr>,
+  consequent: <expr>,
+  alternate: <expr>
 }
 ```
 
 ```js
 {
   kind: 'set_local',
-  id: <literal> | <identifier>,
-  init: Object
+  id: <literal> | <identifier> | null,
+  init: <expr>
 }
 ```
 
 ```js
 {
   kind: 'start',
-  id: <literal> | <identifier>
+  id: <literal> | <identifier> | null
 }
 ```
 
@@ -385,18 +364,16 @@ document.
 
 ```js
 {
-  kind: 'tableswitch',
-  id: <literal> | <identifier>,
-  test: Object,
-  table: [ Object ],
-  body: [ Object ]
+  kind: 'then',
+  id: <literal> | <identifier> | null,
+  body: [ <expr> ]
 }
 ```
 
 ```js
 {
   kind: 'type',
-  id: <literal> | <identifier>
+  id: <literal> | <identifier> | null
 }
 ```
 
@@ -405,7 +382,7 @@ document.
   kind: 'unop',
   type: <type>,
   operator: String
-  expr: Object
+  expr: <expr>
 }
 ```
 
