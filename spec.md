@@ -48,8 +48,8 @@ document.
   kind: 'binop',
   type: <type>,
   operator: String,
-  left: Object,
-  right: Object
+  left: <expr>,
+  right: <expr>
 }
 ```
 
@@ -227,7 +227,7 @@ document.
   sign: 's' | 'u' | null,
   offset: Integer,
   align: Integer,
-  expr: Object
+  expr: <expr>
 }
 ```
 
@@ -243,7 +243,7 @@ document.
   kind: 'loop',
   id: <literal> | <identifier>,
   extra: <extra>,
-  body: [ Object ]
+  body: [ <expr> ]
 }
 ```
 
@@ -307,7 +307,7 @@ document.
 ```js
 {
   kind: 'script',
-  body: [ Object ]
+  body: [ <expr> ]
 }
 ```
 
