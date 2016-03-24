@@ -171,7 +171,7 @@ document.
 ```js
 {
   kind: 'identifier',
-  id: String
+  name: String
 }
 ```
 
