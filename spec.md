@@ -48,8 +48,8 @@ document.
   kind: 'binop',
   type: <type>,
   operator: String,
-  left: Object,
-  right: Object
+  left: <expr>,
+  right: <expr>
 }
 ```
 
@@ -171,7 +171,7 @@ document.
 ```js
 {
   kind: 'identifier',
-  id: String
+  name: String
 }
 ```
 
@@ -188,8 +188,8 @@ document.
 {
   kind: 'import',
   id: <literal> | <identifier> | null,
-  name1: <literal> | <identifier> | null,
-  name2: <literal> | <identifier> | null,
+  modName: <literal>,
+  funcName: <literal>,
   params: [ <expr> ]
 }
 ```
@@ -227,7 +227,7 @@ document.
   sign: 's' | 'u' | null,
   offset: Integer,
   align: Integer,
-  expr: Object
+  expr: <expr>
 }
 ```
 
@@ -243,7 +243,7 @@ document.
   kind: 'loop',
   id: <literal> | <identifier>,
   extra: <extra>,
-  body: [ Object ]
+  body: [ <expr> ]
 }
 ```
 
@@ -307,7 +307,7 @@ document.
 ```js
 {
   kind: 'script',
-  body: [ Object ]
+  body: [ <expr> ]
 }
 ```
 
