@@ -20,7 +20,7 @@
     "grow_memory": [ "expr" ],
     "identifier": [  ],
     "if": [ "test", "consequent", "alternate" ],
-    "import": [ "id", "name1", "name2", "params" ],
+    "import": [ "id", "modName", "funcName", "params" ],
     "invoke": [ "body" ],
     "item": [  ],
     "literal": [  ],
