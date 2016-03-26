@@ -1,0 +1,11 @@
+{
+    "i32.const":     10,
+    "i64.const":     11,
+    "f64.const":     12,
+    "f32.const":     13,
+    "get_local":     14,
+    "set_local":     15,
+    "call":          18,
+    "call_indirect": 19,
+    "call_import":   31
+}

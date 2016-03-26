@@ -1,0 +1,13 @@
+{
+    "nop":         0,
+    "block":       1,
+    "loop":        2,
+    "if":          3,
+    "if_else":     4,
+    "select":      5,
+    "br":          6,
+    "br_if":       7,
+    "br_table":    8,
+    "return":      20,
+    "unreachable": 21
+}
