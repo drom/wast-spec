@@ -179,8 +179,8 @@ document.
 {
   kind: 'if',
   test: <expr>,
-  consequent: <expr>,
-  alternate: <expr> | null
+  then: <expr>,
+  else: <expr> | null
 }
 ```
 
