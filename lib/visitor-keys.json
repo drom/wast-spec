@@ -19,7 +19,7 @@
     "get_local": [ "id" ],
     "grow_memory": [ "expr" ],
     "identifier": [  ],
-    "if": [ "test", "consequent", "alternate" ],
+    "if": [ "test", "then", "else" ],
     "import": [ "id", "modName", "funcName", "params" ],
     "invoke": [ "body" ],
     "item": [  ],
