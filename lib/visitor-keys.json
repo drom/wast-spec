@@ -7,7 +7,7 @@
     "block": [ "body" ],
     "br": [ "id", "expr" ],
     "br_if": [ "id", "test", "expr" ],
-    "br_table": [ "expr", "body" ],
+    "br_table": [ "exprs", "body" ],
     "call": [ "id", "expr" ],
     "call_import": [ "id", "expr" ],
     "call_indirect": [ "id", "expr" ],
