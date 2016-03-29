@@ -321,8 +321,8 @@ document.
 {
   kind: 'select',
   test: <expr>,
-  consequent: <expr>,
-  alternate: <expr>
+  then: <expr>,
+  else: <expr>
 }
 ```
 
