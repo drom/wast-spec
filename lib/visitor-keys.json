@@ -15,7 +15,7 @@
     "cvtop": [ "expr" ],
     "else": [ "id", "body" ],
     "export": [ "name", "id" ],
-    "func": [ "id", "param", "result", "body" ],
+    "func": [ "id", "params", "result", "body" ],
     "get_local": [ "id" ],
     "grow_memory": [ "expr" ],
     "identifier": [  ],
