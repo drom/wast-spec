@@ -37,7 +37,7 @@
     "return": [ "expr" ],
     "script": [ "body" ],
     "segment": [ "name" ],
-    "select": [ "test", "consequent", "alternate" ],
+    "select": [ "then", "else", "test" ],
     "set_local": [ "id", "init" ],
     "start": [ "id" ],
     "store": [ "addr", "data" ],
