@@ -148,6 +148,7 @@ document.
 {
   kind: 'func',
   id: <literal> | <identifier> | null,
+  local: [<literal> | <identifier> | null],
   param: <expr>,
   result: <expr>,
   body: [ <expr> ]
