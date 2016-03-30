@@ -4,7 +4,7 @@
     "assert_return_nan": [ "invoke" ],
     "assert_trap": [ "invoke", "failure" ],
     "binop": [ "left", "right" ],
-    "block": [ "body" ],
+    "block": [ "id", "body" ],
     "br": [ "id", "expr" ],
     "br_if": [ "id", "test", "expr" ],
     "br_table": [ "exprs", "body" ],
