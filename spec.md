@@ -180,8 +180,8 @@ document.
 {
   kind: 'if',
   test: <expr>,
-  then: <expr>,
-  else: <expr> | null
+  then: [<expr>],
+  else: [<expr>] | null
 }
 ```
 
