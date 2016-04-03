@@ -1,0 +1,189 @@
+{
+  "assert_invalid": {
+    "failure": null,
+    "module": null
+  },
+  "assert_return": {
+    "expr": null,
+    "invoke": null
+  },
+  "assert_return_nan": {
+    "invoke": null
+  },
+  "assert_trap": {
+    "failure": null,
+    "invoke": null
+  },
+  "binop": {
+    "left": null,
+    "operator": null,
+    "right": null,
+    "type": null
+  },
+  "block": {
+    "body": [],
+    "id": null
+  },
+  "br": {
+    "expr": null,
+    "id": null
+  },
+  "br_if": {
+    "expr": null,
+    "id": null,
+    "test": null
+  },
+  "br_table": {
+    "body": [],
+    "expr": []
+  },
+  "call": {
+    "expr": null,
+    "id": null
+  },
+  "call_import": {
+    "expr": null,
+    "id": null
+  },
+  "call_indirect": {
+    "expr": null,
+    "id": null
+  },
+  "const": {
+    "init": null,
+    "type": null
+  },
+  "cvtop": {
+    "expr": null,
+    "operator": null,
+    "type": null,
+    "type1": null
+  },
+  "else": {
+    "body": [],
+    "id": null
+  },
+  "export": {
+    "id": null,
+    "name": null
+  },
+  "func": {
+    "body": [],
+    "id": null,
+    "local": [],
+    "param": null,
+    "result": null
+  },
+  "get_local": {
+    "id": null
+  },
+  "grow_memory": {
+    "expr": null
+  },
+  "identifier": {
+    "name": null
+  },
+  "if": {
+    "else": null,
+    "test": null,
+    "then": null
+  },
+  "import": {
+    "funcName": null,
+    "id": null,
+    "modName": null,
+    "params": []
+  },
+  "invoke": {
+    "body": [],
+    "name": null
+  },
+  "item": {
+    "type": null
+  },
+  "kind": {
+    "expr": null
+  },
+  "literal": {
+    "raw": null,
+    "value": null
+  },
+  "load": {
+    "align": null,
+    "expr": null,
+    "offset": null,
+    "sign": null,
+    "size": null,
+    "type": null
+  },
+  "local": {
+    "items": []
+  },
+  "loop": {
+    "body": [],
+    "extra": null,
+    "id": null
+  },
+  "memory": {
+    "segment": null
+  },
+  "memory_size": {
+    "kind": null
+  },
+  "module": {
+    "body": []
+  },
+  "nop": {},
+  "param": {
+    "items": []
+  },
+  "relop": {
+    "left": null,
+    "operator": null,
+    "right": null,
+    "type": null
+  },
+  "result": {
+    "type": null
+  },
+  "script": {
+    "body": []
+  },
+  "segment": {},
+  "select": {
+    "else": null,
+    "test": null,
+    "then": null
+  },
+  "set_local": {
+    "id": null,
+    "init": null
+  },
+  "start": {
+    "id": null
+  },
+  "store": {
+    "addr": null,
+    "align": null,
+    "data": null,
+    "offset": null,
+    "size": null,
+    "type": null
+  },
+  "table": {
+    "items": []
+  },
+  "then": {
+    "body": [],
+    "id": null
+  },
+  "type": {
+    "id": null
+  },
+  "unop": {
+    "expr": null,
+    "operator": null,
+    "type": null
+  },
+  "unreachable": {}
+}
