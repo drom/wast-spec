@@ -22,6 +22,6 @@
     "i64.store":       52,
     "f32.store":       53,
     "f64.store":       54,
-    "current_memory":  60,
+    "current_memory":  59,
     "grow_memory":     57
 }
