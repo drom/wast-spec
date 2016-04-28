@@ -53,6 +53,7 @@
     "init": null,
     "type": null
   },
+  "current_memory": {},
   "cvtop": {
     "expr": null,
     "operator": null,
@@ -126,9 +127,6 @@
   },
   "memory": {
     "segment": null
-  },
-  "memory_size": {
-    "kind": null
   },
   "module": {
     "body": []
