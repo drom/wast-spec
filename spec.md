@@ -147,6 +147,7 @@ document.
 ```js
 {
   kind: 'func',
+  expo: <literal> | null,
   id: <literal> | <identifier> | null,
   local: [<literal> | <identifier> | null],
   param: <expr>,
