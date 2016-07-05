@@ -1,0 +1,29 @@
+{
+    "i32.clz":             87,
+    "i32.ctz":             88,
+    "i32.popcnt":          89,
+    "i32.eqz":             90,
+
+    "i64.clz":             114,
+    "i64.ctz":             115,
+    "i64.popcnt":          116,
+    "i64.eqz":             186,
+
+    "f32.abs":             123,
+    "f32.neg":             124,
+
+    "f32.ceil":            126,
+    "f32.floor":           127,
+    "f32.trunc":           128,
+    "f32.nearest":         129,
+    "f32.sqrt":            130,
+
+    "f64.abs":             143,
+    "f64.neg":             144,
+
+    "f64.ceil":            146,
+    "f64.floor":           147,
+    "f64.trunc":           148,
+    "f64.nearest":         149,
+    "f64.sqrt":            150
+}
