@@ -1,6 +1,6 @@
 {
-    "i32.const":     10,
-    "i64.const":     11,
-    "f64.const":     12,
-    "f32.const":     13
+    "i32.const":     16,
+    "i64.const":     17,
+    "f64.const":     18,
+    "f32.const":     19
 }
