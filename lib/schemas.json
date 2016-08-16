@@ -177,7 +177,8 @@
     "id": null
   },
   "type": {
-    "id": null
+    "id": null,
+    "expr": null
   },
   "unop": {
     "expr": null,

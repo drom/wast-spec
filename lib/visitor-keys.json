@@ -43,7 +43,7 @@
     "store": [ "addr", "data" ],
     "table": [ "items" ],
     "then": [ "id", "body" ],
-    "type": [ "id" ],
+    "type": [ "id", "expr" ],
     "unop": [ "expr" ],
     "unreachable": [  ]
 }
