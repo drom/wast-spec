@@ -16,7 +16,7 @@
     "cvtop": [ "expr" ],
     "else": [ "id", "body" ],
     "export": [ "name", "id" ],
-    "func": [ "expo", "id", "params", "result", "local", "body" ],
+    "func": [ "expo", "id", "type", "params", "result", "local", "body" ],
     "get_local": [ "id" ],
     "grow_memory": [ "expr" ],
     "identifier": [  ],
@@ -43,7 +43,7 @@
     "store": [ "addr", "data" ],
     "table": [ "items" ],
     "then": [ "id", "body" ],
-    "type": [ "id", "expr" ],
+    "type": [ "id", "func" ],
     "unop": [ "expr" ],
     "unreachable": [  ]
 }
