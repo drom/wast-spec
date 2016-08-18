@@ -27,7 +27,7 @@
     "literal": [  ],
     "load": [ "expr" ],
     "local": [ "items" ],
-    "loop": [ "body", "extra" ],
+    "loop": [ "id", "extra", "body" ],
     "memory": [ "segment" ],
     "module": [ "body" ],
     "nop": [  ],
