@@ -28,7 +28,7 @@
     "load": [ "expr" ],
     "local": [ "items" ],
     "loop": [ "id", "extra", "body" ],
-    "memory": [ "segment" ],
+    "memory": [ "int", "int1", "segment" ],
     "module": [ "body" ],
     "nop": [  ],
     "param": [ "items" ],
